@@ -16,16 +16,16 @@ def txttolist(txt):
     with open(txt, "r") as my_file:
         data = my_file.read()
     
-    words_in_text = data.replace('\n', ' ').split()
+    wordstext = data.replace('\n', ' ').split()
     
-    return words_in_text
+    return wordstext
 
 def values(txt):
     global valuesoftxt
-    words_in_text = txttolist(txt)
+    wordstext = txttolist(txt)
     word_to_value = dict(zip(words, val))
     
-    for word in words_in_text:
+    for word in wordstext:
         if word in word_to_value:
             valuesoftxt.append(word_to_value[word])
 
